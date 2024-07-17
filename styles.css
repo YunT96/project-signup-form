@@ -27,9 +27,11 @@ body, html {
     background-color: blanchedalmond;
     width: 33%;
     overflow: hidden;
+    position: relative;
+    display: inline-block;
 }
 
-.banner-container img {
+.banner-image {
     width: 100%;
     height: 100%;
     transform: scale(2.0);
@@ -40,26 +42,74 @@ body, html {
     
 }
 
+.logo-image {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 100%; /* Adjust this value as needed */
+    max-height: 100%; /* Adjust this value as needed */
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+
+.image-text a,
+.image-text a:visited {
+    color: inherit;
+}
+
+.banner-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust the color and opacity as needed */
+    z-index: 1;
+}
+
 .form-container {
     width: 67%;
 }
-.form-container > *{
-    margin-right: 5rem;
-}
+
 
 .form-container > * {
     width: 100%;
     height: 36%;
-    padding: 2rem 2rem 3rem 2rem;
+    padding: 3rem;
 }
 
 
 .form-message {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
-.form-message h2 {
-    margin-top: auto;
+.form-message > * {
+    margin: 0;
+}
+
+h2 > span {
+    color: #6c7f9e;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 form{
@@ -77,7 +127,8 @@ form > * {
 .form-field {
     background-color: aliceblue;
     height: 28%;
-    padding: 2rem;
+    padding: 2rem 3rem 2rem 3rem;
+    filter: drop-shadow(0px 5px 5px #5f6f9b);
 }
 
 .form-group {
@@ -86,7 +137,7 @@ form > * {
 }
 
 .form-buttons > p {
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 1rem 0rem 2rem 0rem;
 }
 
 .form-buttons > button {
@@ -94,6 +145,12 @@ form > * {
     border-radius: 5px;
     border: none;
     color: white;
+    font-size: 1.2rem;
     font-weight: bold;
     background-color: #6c7f9e;
+}
+
+.existing-login a {
+    color: #6c7f9e;
+    text-decoration: none;
 }
