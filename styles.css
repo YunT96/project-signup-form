@@ -15,6 +15,7 @@
 body, html {
     height: 100%;
     font-family: 'josefin_sansregular', sans-serif;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .main-container {
@@ -25,23 +26,74 @@ body, html {
 .banner-container {
     background-color: blanchedalmond;
     width: 33%;
+    overflow: hidden;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2.0);
+    position: relative;
+    bottom: 250px;
+    right: 50px;
+    object-fit: cover;
+    
 }
 
 .form-container {
     width: 67%;
 }
+.form-container > *{
+    margin-right: 5rem;
+}
 
 .form-container > * {
     width: 100%;
-    height: 33%;
+    height: 36%;
+    padding: 2rem 2rem 3rem 2rem;
 }
 
-.form-container form {
+
+.form-message {
+    display: flex;
+}
+
+.form-message h2 {
+    margin-top: auto;
+}
+
+form{
+    display: flex;
+    margin-top: 2rem;
+    gap: 10%;
+}
+
+form > * {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .form-field {
     background-color: aliceblue;
-    height: 33%;
+    height: 28%;
+    padding: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-buttons > p {
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.form-buttons > button {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #6c7f9e;
 }

@@ -2,21 +2,69 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     
     <div class="main-container">
+
         <div class="banner-container">
-            
+            <img src="./images/dennis-yu-unsplash.jpg" alt="Banner Image">
         </div>
+
         <div class="form-container">
-            <div class="welcome-message"></div>
-            <div class="form-field"></div>
-            <div class="form-buttons"></div>
+
+            <div class="form-message">
+                <h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Soluta magnam rem quisquam qui facere voluptatum alias dolores. 
+                    Ipsam sunt sint consectetur ullam quis perferendis, 
+                    voluptatem aperiam modi. Totam, fugit rem!
+                </h2>
+            </div>
+
+            <div class="form-field">
+                <h2>Let's do this!</h2>
+                <form action="" method="get" id="form1">
+                    <div class="left-form">
+                        <div class="form-group">
+                            <label for="first-name">First Name </label>
+                            <input type="text" id="first-name" name="first-name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email </label>
+                            <input type="email" id="email" name="email"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-password">Password </label>
+                            <input type="password" id="user-password" name="user-password"/>
+                        </div>
+                    </div>
+                    <div class="right-form">
+                        <div class="form-group">
+                            <label for="last-name">Last Name </label>
+                            <input type="text" id="last-name" name="last-name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number </label>
+                            <input type="tel" id="phone-number" name="phone-number"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password </label>
+                            <input type="password" id="confirm-password" name="confirm-password"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" form="form1" value="Submit">Create account</button>
+                <p class="existing-login">Already have an account? Log in</p>
+            </div>
 
         </div>
+
     </div>
 
 
