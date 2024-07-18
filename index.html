@@ -21,7 +21,8 @@
 
             <div class="form-message">
                 <h2>Welcome to <span>Vertical Ventures!</span></h2>
-                <p>Join our community of passionate climbers and outdoor enthusiasts. Sign up now to access exclusive content, tips, and adventures!</p>
+                <p>Join our community of passionate climbers and outdoor enthusiasts.
+                <br>Sign up now to access exclusive content, tips, and adventures!</p>
             </div>
 
             <div class="form-field">
@@ -30,29 +31,29 @@
                     <div class="left-form">
                         <div class="form-group">
                             <label for="first-name">First Name </label>
-                            <input type="text" id="first-name" name="first-name"/>
+                            <input type="text" id="first-name" name="first-name" required />
                         </div>
                         <div class="form-group">
                             <label for="email">Email </label>
-                            <input type="email" id="email" name="email"/>
+                            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
                         </div>
                         <div class="form-group">
                             <label for="user-password">Password </label>
-                            <input type="password" id="user-password" name="user-password"/>
+                            <input type="password" id="user-password" name="user-password" minlength="8" required />
                         </div>
                     </div>
                     <div class="right-form">
                         <div class="form-group">
                             <label for="last-name">Last Name </label>
-                            <input type="text" id="last-name" name="last-name"/>
+                            <input type="text" id="last-name" name="last-name" required />
                         </div>
                         <div class="form-group">
                             <label for="phone-number">Phone Number </label>
-                            <input type="tel" id="phone-number" name="phone-number"/>
+                            <input type="tel" id="phone-number" name="phone-number" pattern="\d*" title="Please enter a valid phone number" required />
                         </div>
                         <div class="form-group">
                             <label for="confirm-password">Confirm Password </label>
-                            <input type="password" id="confirm-password" name="confirm-password"/>
+                            <input type="password" id="confirm-password" name="confirm-password" minlength="8" required />
                         </div>
                     </div>
                 </form>
